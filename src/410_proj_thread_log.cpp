@@ -14,7 +14,7 @@
 using namespace std;
 
 //NOTE: you should have no mutexes in this file
-//TODO linker errors?  Did you include the pthread library?   And set the proper dialect?
+//TODO linker errors?  Did you include the pthread library?   And set the proper dialect?  Set
 //TODO declare globals, one for file one for console
 Logger fileLogger(LOG_FILE);
 Logger consoleLogger(LOG_CONSOLE);

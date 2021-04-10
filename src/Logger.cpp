@@ -21,14 +21,12 @@ Logger::Logger(LOG_TYPE lt, string fn){
 void Logger::Log(string info){
 
 	if (lt == LOG_CONSOLE){
-		mtx.lock();
+		lock_guard<mutex> lock(mtx);
 		cout << info << endl;
-		mtx.unlock();
 	}
 	else{ //LOG_FILE
-		mtx.lock();
+		lock_guard<mutex> lock(mtx);
 		fs << info << endl;
-		mtx.unlock();
 	}
 
 
