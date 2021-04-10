@@ -32,7 +32,7 @@ bool doWork = true;
 void fun(string info){
 
 	// Allows main to ask threads to stop doing work
-	if (doWork){
+	while (doWork){
 		fileLogger.Log(info);
 		consoleLogger.Log(info);
 	}
